@@ -1,4 +1,4 @@
-public record Creature
+public record Creature : Sorcery
 {
     public string Name;
     public string ManaCost;
