@@ -1,4 +1,4 @@
-class JSonScribe
+public class JSonScribe
 {
     
 }
