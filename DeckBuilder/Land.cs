@@ -1,4 +1,4 @@
 public record Land : Card
 {
-    public string ManaCost = null;
+    public string ManaCost = "0";
 }

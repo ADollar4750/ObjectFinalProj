@@ -27,4 +27,31 @@ public class AppTests
 
         Assert.AreEqual("Tim", test.Deck[0].Name);
     }
+
+    [Test]
+    public void LandAddTest()
+    {
+        DeckBuilderApp test = new DeckBuilderApp();
+        Land expected = new Land(){
+            Name = "Bajuka Bog",
+            Legendary = false,
+            Ability = "Bojuka Bog enters the battlefiled tapped. When Bojuka BOg enters the battlefiled,exile all cards from target player's graveyard. Tap it add one Black to your mana pool.",
+        };
+        test.AddCard(expected);
+
+        Assert.AreEqual(null, test.Deck[0].ManaCost);
+    }
+        [Test]
+    public void InstantAddTest()
+    {
+        DeckBuilderApp test = new DeckBuilderApp();
+        Instant expected = new Instant(){
+            Name = "Counter Spell",
+            ManaCost = "2 Blue",
+            Ability = "Counter target spell.",
+        };
+        test.AddCard(expected);
+
+        Assert.AreEqual(false, test.Deck[0].Legendary);
+    }
 }

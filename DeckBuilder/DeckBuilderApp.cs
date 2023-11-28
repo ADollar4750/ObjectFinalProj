@@ -9,5 +9,9 @@ public class DeckBuilderApp
     {
         Deck.Add(userCard);
     }
+    // public void RemoveCard(Card userCard)
+    // {
+    //     Deck.Remove(userCard);
+    // }
 
 }
