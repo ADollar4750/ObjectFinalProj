@@ -1,8 +1,4 @@
-public record Sorcery
+public record Sorcery : Card
 {
-    public string Name; 
-    public string ManaCost;
-    public bool Legendary;
-    public string Ability;
 
 }

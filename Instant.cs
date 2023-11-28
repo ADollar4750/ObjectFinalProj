@@ -1,7 +1,5 @@
-public record Instant
+public record Instant : Card
 {
-    public string Name; 
-    public string ManaCost;
-    public string Ability;
+
 
 }

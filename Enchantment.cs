@@ -1,8 +1,4 @@
-public record Enchantment
+public record Enchantment : Card
 {
-    public string Name; 
-    public string ManaCost;
-    public bool Legendary;
-    public string Ability;
 
 }

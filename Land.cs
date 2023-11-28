@@ -1,7 +1,4 @@
-public record Land
+public record Land : Card
 {
-    public string Name; 
-    public bool Legendary;
-    public string Ability;
 
 }

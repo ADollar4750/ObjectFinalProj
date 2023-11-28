@@ -1,11 +1,8 @@
-public record Creature : Sorcery
+public record Creature : Card
 {
-    public string Name;
-    public string ManaCost;
-    public bool Legendary;
-    public string CreatureType;
-    public string Ability;
-    public int Power;
-    public int Toughness;
+
+    public string CreatureType { get; init; }
+    public int Power { get; init; }
+    public int Toughness { get; init; }
 
 }
