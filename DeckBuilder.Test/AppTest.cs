@@ -14,7 +14,8 @@ public class AppTests
     public void CreatureAddTest()
     {
         DeckBuilderApp test = new DeckBuilderApp();
-        Creature expected = new Creature(){
+        Creature expected = new Creature()
+        {
             Name = "Tim",
             ManaCost = "0",
             Legendary = true,
@@ -32,7 +33,8 @@ public class AppTests
     public void LandAddTest()
     {
         DeckBuilderApp test = new DeckBuilderApp();
-        Land expected = new Land(){
+        Land expected = new Land()
+        {
             Name = "Bajuka Bog",
             Legendary = false,
             Ability = "Bojuka Bog enters the battlefiled tapped. When Bojuka BOg enters the battlefiled,exile all cards from target player's graveyard. Tap it add one Black to your mana pool.",
@@ -41,11 +43,12 @@ public class AppTests
 
         Assert.AreEqual(null, test.Deck[0].ManaCost);
     }
-        [Test]
+    [Test]
     public void InstantAddTest()
     {
         DeckBuilderApp test = new DeckBuilderApp();
-        Instant expected = new Instant(){
+        Instant expected = new Instant()
+        {
             Name = "Counter Spell",
             ManaCost = "2 Blue",
             Ability = "Counter target spell.",
@@ -53,5 +56,20 @@ public class AppTests
         test.AddCard(expected);
 
         Assert.AreEqual(false, test.Deck[0].Legendary);
+    }
+    [Test]
+    public void RemoveCardTest()
+    {
+        DeckBuilderApp test = new DeckBuilderApp();
+        Instant expected = new Instant()
+        {
+            Name = "Counter Spell",
+            ManaCost = "2 Blue",
+            Ability = "Counter target spell.",
+        };
+        test.AddCard(expected);
+        test.RemoveCard(expected);
+        bool actual = test.Deck.Contains(expected);
+        Assert.AreNotEqual(true, actual);
     }
 }
