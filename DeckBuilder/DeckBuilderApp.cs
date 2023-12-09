@@ -1,3 +1,4 @@
+using System.Net.Cache;
 using System.Net.Security;
 using System.Reflection.Metadata;
 using System.Runtime.InteropServices;
@@ -13,6 +14,10 @@ public class DeckBuilderApp
     public void RemoveCard(Card userCard)
     {
         Deck.Remove(userCard);
+    }
+    public void RequestInfo()
+    {
+
     }
 
 }

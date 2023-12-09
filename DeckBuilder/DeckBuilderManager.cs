@@ -23,8 +23,6 @@ public class DeckBuilderManager
         bool running = false;
         while (running != true)
         {
-
-
             if (userInput == "1")
             {
                 Console.WriteLine("Please type in the name of your deck:");
@@ -222,6 +220,7 @@ public class DeckBuilderManager
                             Toughness = int.Parse(toughnessofCard),
                         };
                         app.RemoveCard(userCreature);
+                        continue;
                     }
 
                     else if (userInput == "Instant")
@@ -240,6 +239,7 @@ public class DeckBuilderManager
                             Ability = abilityofCard,
                         };
                         app.RemoveCard(userInstant);
+                        continue;
                     }
 
                     else if (userInput == "Sorcery")
@@ -261,6 +261,7 @@ public class DeckBuilderManager
                             Ability = abilityofCard,
                         };
                         app.RemoveCard(userSorcery);
+                        continue;
                     }
                     else if (userInput == "Artifact")
                     {
@@ -281,6 +282,7 @@ public class DeckBuilderManager
                             Ability = abilityofCard,
                         };
                         app.RemoveCard(userArtifact);
+                        continue;
                     }
                     else if (userInput == "Enchantment")
                     {
@@ -301,6 +303,7 @@ public class DeckBuilderManager
                             Ability = abilityofCard,
                         };
                         app.RemoveCard(userEnchantment);
+                        continue;
                     }
                     else if (userInput == "Land")
                     {
@@ -318,12 +321,13 @@ public class DeckBuilderManager
                             Ability = abilityofCard,
                         };
                         app.RemoveCard(userLand);
+                        continue;
                     }
                 }
                 else if (userInput == "3")
                 {
                     running = true;
-                    scribe.deckFileMaker(app.Deck);
+                    // scribe.deckFileMaker(app.Deck);
                 }
             }
             else if (userInput == "2")
